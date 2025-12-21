@@ -1,5 +1,6 @@
-# 📘 README.md  
+
 ## **Install Windows Natively Using a Virtual Machine (RAW Disk Method)**  
+
 ### **“Did you know you can install an OS *natively* through a virtual machine?”**
 
 ```
@@ -35,7 +36,7 @@
 
 ---
 
-# 🧭 **Introduction**
+# **Introduction**
 
 Older Apple devices—especially **MacBook Pro models from 2010 to 2012**—struggle with native Windows installation due to several limitations:
 
@@ -66,7 +67,7 @@ Intel i5 • 16GB RAM • Dual SSD • Ubuntu 24.04
 
 ---
 
-## Requirements
+# **Requirements**
   - Ubuntu 22.04/24.04 installed on the MacBook
   - VirtualBox
   - GParted
