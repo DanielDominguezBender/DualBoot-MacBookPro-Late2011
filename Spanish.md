@@ -50,7 +50,10 @@ Esto permite:
 - Tener dual boot Ubuntu + Windows
 - Dar una segunda vida a hardware antiguo
 
-📌 Este procedimiento fue probado en un MacBook Pro Late 2011 (i5, 16GB RAM, doble SSD).
+Este procedimiento ha sido probado en:
+
+🖥️ **MacBook Pro Late 2011**  
+Intel i5 • 16 GB RAM • Doble SSD • Ubuntu 24.04  
 
 
 ---
@@ -69,7 +72,7 @@ Esto permite:
 ---
 
 
-## 🛠️ Preparar el SSD con una partición para Windows
+## 🛠️ **Preparar el SSD**
 
 Abrir GParted:
 
