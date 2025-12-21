@@ -21,7 +21,7 @@
 - [Introducción](#-introducción)
 - [Requisitos](#-requisitos)
 - [Preparar el SSD](#-preparar-el-ssd)
-- [Crear Disco RAW](#-crear-un-disco-raw-para-virtualbox)
+- [Crear Disco RAW](#-crear-un-disco-raw)
 - [Desactivar-KVM](#-desactivar-kvm-para-usar-virtualbox)
 - [Configurar la VM](#-configurar-la-máquina-virtual)
 - [Instalar Windows en RAW Disk](#-instalación-de-windows-en-el-disco-físico)
@@ -93,7 +93,7 @@ Abrir GParted:
 ---
 
 
-## 🛠️ Crear un Disco RAW para VirtualBox
+## 🛠️ Crear un Disco RAW
 
 VirtualBox puede utilizar un disco físico real mediante un archivo VMDK especial.
 
