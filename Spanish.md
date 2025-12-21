@@ -33,7 +33,7 @@
 
 ---
 
-## 🧭 Introducción
+## Introducción
 
 En muchos equipos Apple antiguos (MacBook Pro 2010–2012), instalar Windows de forma nativa puede ser un verdadero desafío:
 
