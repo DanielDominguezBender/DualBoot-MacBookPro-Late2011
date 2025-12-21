@@ -1,10 +1,8 @@
 
+![Banner](imgs/Banner.png)
 
-
-NATIVE WINDOWS INSTALLATION USING A VIRTUAL MACHINE (RAW DISK)
-                 Dual Boot: Ubuntu  ◀────▶  Windows 10            
-                    MacBook Pro 2011 • No BootCamp  
-
+NATIVE WINDOWS INSTALLATION USING A VIRTUAL MACHINE (RAW DISK)<br>
+Dual Boot: Ubuntu  ◀────▶  Windows 10        
 
 ## Instalar Windows nativo usando una Máquina Virtual (caso real MacBook Pro 2011)
 
@@ -223,3 +221,7 @@ GRUB debe mostrar:
 
 - Ubuntu
 - Windows Boot Manager
+
+## Diagrama
+
+![Diagrama](/imgs/diagrama.png)
