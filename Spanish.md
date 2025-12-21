@@ -72,7 +72,7 @@ Intel i5 • 16 GB RAM • Doble SSD • Ubuntu 24.04
 ---
 
 
-## 🛠️ **Preparar el SSD**
+## 🛠️ Preparar el SSD
 
 Abrir GParted:
 
