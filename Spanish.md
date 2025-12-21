@@ -1,17 +1,9 @@
 
-╔══════════════════════════════════════════════════════════════════════╗
-║   ____        _ _ _             ____              _                  ║
-║  |  _ \ _   _(_) | |_ ___      |___ \   _   _  __| | ___  ___        ║
-║  | | | | | | | | | __/ _ \ _____ __) | | | | |/ _` |/ _ \/ __|       ║
-║  | |_| | |_| | | | || (_) |_____/ __/  | |_| | (_| |  __/\__ \       ║
-║  |____/ \__,_|_|_|\__\___/     |_____|  \__,_|\__,_|\___||___/       ║
-║                                                                      ║
-║      NATIVE WINDOWS INSTALLATION USING A VIRTUAL MACHINE (RAW DISK)  ║
-║                 Dual Boot: Ubuntu  ◀────▶  Windows 10                ║
-║                     MacBook Pro 2011 • No BootCamp                   ║
-╚══════════════════════════════════════════════════════════════════════╝
 
 
+NATIVE WINDOWS INSTALLATION USING A VIRTUAL MACHINE (RAW DISK)
+                 Dual Boot: Ubuntu  ◀────▶  Windows 10            
+                    MacBook Pro 2011 • No BootCamp  
 
 
 ## Instalar Windows nativo usando una Máquina Virtual (caso real MacBook Pro 2011)
