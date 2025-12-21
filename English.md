@@ -13,7 +13,7 @@
 ║                                                                      ║
 ║                     D U A L   B O O T   W I N – M A C                ║
 ║        Native Installation Using a Virtual Machine (RAW Disk)        ║
-║                     MacBook Pro 2011 • No BootCamp                   ║
+║                     MacBook Pro 2011 • No Boot Camp                   ║
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
