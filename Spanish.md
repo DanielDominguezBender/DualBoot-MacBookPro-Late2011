@@ -24,7 +24,7 @@ Dual Boot: Ubuntu  ◀────▶  Windows 10
 
 ---
 
-## 🧭 **Introducción**
+## 🧭 Introducción
 
 En muchos equipos Apple antiguos (MacBook Pro 2010–2012), instalar Windows de forma nativa puede ser un verdadero desafío:
 
@@ -59,7 +59,7 @@ Intel i5 • 16 GB RAM • Doble SSD • Ubuntu 24.04
 ---
 
 
-## 🛠️ **Requisitos**
+## 🛠️ Requisitos
 
 - Ubuntu instalado en el MacBook
 - Un segundo SSD donde instalar Windows (ej: /dev/sdb)
