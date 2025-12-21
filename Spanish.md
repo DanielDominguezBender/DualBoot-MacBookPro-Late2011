@@ -9,22 +9,22 @@ Dual Boot: Ubuntu  ◀────▶  Windows 10
 
 # 📑 Índice
 
-- [Introducción](#introducción)
-- [Requisitos](#requisitos)
-- [Preparación del SSD](#1-preparación-del-ssd-para-windows)
-- [Crear Disco RAW](#2-crear-un-disco-raw-para-virtualbox)
-- [Desactivar-KVM](#3-desactivar-kvm-para-usar-virtualbox)
-- [Configurar la VM](#4-configurar-la-máquina-virtual)
-- [Instalar Windows en RAW Disk](#5-instalación-de-windows-en-el-disco-físico)
-- [Arranque Nativo en Mac](#6-arrancar-windows-de-forma-nativa)
-- [Dual Boot con GRUB](#7-configuración-del-arranque-dual)
-- [Troubleshooting](#9-troubleshooting)
+- [Introducción](#-introducción)
+- [Requisitos](#-requisitos)
+- [Preparación del SSD](#-preparación-del-ssd-para-windows)
+- [Crear Disco RAW](#-crear-un-disco-raw-para-virtualbox)
+- [Desactivar-KVM](#-desactivar-kvm-para-usar-virtualbox)
+- [Configurar la VM](#-configurar-la-máquina-virtual)
+- [Instalar Windows en RAW Disk](#-instalación-de-windows-en-el-disco-físico)
+- [Arranque Nativo en Mac](#-arrancar-windows-de-forma-nativa)
+- [Dual Boot con GRUB](#-configuración-del-arranque-dual)
+- [Troubleshooting](#-troubleshooting)
 - [Conclusión](#conclusión)
 - [English Version](#english-version)
 
 ---
 
-## 🧭 Introducción
+## 🧭 **Introducción**
 
 En muchos equipos Apple antiguos (MacBook Pro 2010–2012), instalar Windows de forma nativa puede ser un verdadero desafío:
 
@@ -56,7 +56,7 @@ Esto permite:
 ---
 
 
-## 🛠️ 1. Requisitos
+## 🛠️ **Requisitos**
 
 - Ubuntu instalado en el MacBook
 - Un segundo SSD donde instalar Windows (ej: /dev/sdb)
@@ -69,7 +69,7 @@ Esto permite:
 ---
 
 
-## 🛠️ 2. Preparar el SSD con una partición para Windows
+## 🛠️ Preparar el SSD con una partición para Windows
 
 Abrir GParted:
 
@@ -81,7 +81,7 @@ Abrir GParted:
 ---
 
 
-## 🛠️ 3. Crear un Disco RAW para VirtualBox
+## 🛠️ Crear un Disco RAW para VirtualBox
 
 VirtualBox puede utilizar un disco físico real mediante un archivo VMDK especial.
 
@@ -102,7 +102,7 @@ sudo chmod 666 /dev/sdb
 ---
 
 
-## 🛠️ 4. Desactivar KVM (si no, VirtualBox no arranca)
+## 🛠️ Desactivar KVM (si no, VirtualBox no arranca)
 
 ```bash
 sudo rmmod kvm_intel
@@ -122,7 +122,7 @@ sudo reboot
 ---
 
 
-## 🛠️ 5. Crear y configurar la Máquina Virtual
+## 🛠️ Crear y configurar la Máquina Virtual
 
 Configuración recomendada:
 
@@ -152,7 +152,7 @@ Storage
 ---
 
 
-## 🛠️ 6. Instalar Windows dentro de la VM (pero en disco real)
+## 🛠️ Instalar Windows dentro de la VM (pero en disco real)
 
 Arranca la VM.
 
@@ -173,7 +173,7 @@ APAGA LA VM inmediatamente.
 ---
 
 
-## 🛠️ 7. Arrancar Windows de forma nativa en el MacBook
+## 🛠️ Arrancar Windows de forma nativa en el MacBook
 
 1) Reiniciar el Mac
 2) Mantener pulsado ALT (Option)
@@ -185,7 +185,7 @@ APAGA LA VM inmediatamente.
 ---
 
 
-## 🛠️ 8. Añadir Windows al menú GRUB (dual boot)
+## 🛠️ Añadir Windows al menú GRUB (dual boot)
 
 En Ubuntu:
 
