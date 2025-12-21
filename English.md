@@ -66,27 +66,81 @@ Intel i5 • 16GB RAM • Dual SSD • Ubuntu 24.04
 
 ---
 
-# ⚙️ **Requirements**
+## Requirements
+  - Ubuntu 22.04/24.04 installed on the MacBook
+  - VirtualBox
+  - GParted
+  - Windows 10 ISO
+  - MacBook Pro 2011 or similar Intel-based Mac
+  - Secondary SSD for Windows installation
+  - Terminal with sudo privileges
 
-To complete this procedure, you will need:
+  ## 1. Preparing the SSD for Windows
+  Use GParted to create a new NTFS partition:
+  1. Open GParted
+  2. Select the secondary SSD (e.g., `/dev/sdb`)
+  3. Create a new NTFS partition of 100–150 GB (e.g., `/dev/sdb3`)
+  4. Apply changes
 
-### ✔️ Hardware
-- MacBook Pro (2010–2012), tested on the 2011 model  
-- Two SSD units (one for Ubuntu, one for Windows)
+  ## 2. Creating a RAW Disk for VirtualBox
+  Run the following command:
+  ```bash
+  sudo VBoxManage internalcommands createrawvmdk       -filename ~/win10_raw.vmdk       -rawdisk /dev/sdb
+  ```
 
-### ✔️ Software
-- Ubuntu 22.04 / 24.04 installed  
-- VirtualBox  
-- GParted  
-- Windows 10 ISO  
-- Terminal with sudo privileges  
+  Fix permissions:
+  ```bash
+  sudo chown $USER:$USER ~/win10_raw.vmdk
+  sudo chmod 666 /dev/sdb
+  ```
 
-### ✔️ Basic Knowledge
-- Partition management  
-- Linux terminal usage  
-- Understanding of RAW Disk passthrough (mapping a physical disk to a VM)
+  ## 3. Disabling KVM
+  VirtualBox cannot run with KVM enabled.
 
-### ✔️ Warning
-> ⚠️ *This process writes directly to your physical drive. Selecting the wrong disk may cause data loss.*
+  Temporarily disable KVM:
+  ```bash
+  sudo rmmod kvm_intel
+  sudo rmmod kvm
+  ```
 
+  Permanently blacklist it:
+  ```bash
+  echo "blacklist kvm_intel" | sudo tee /etc/modprobe.d/blacklist-kvm.conf
+  echo "blacklist kvm" | sudo tee -a /etc/modprobe.d/blacklist-kvm.conf
+  sudo update-initramfs -u
+  sudo reboot
+  ```
 
+  ## 4. Configuring the Virtual Machine
+  - Create a new VM → Windows 10 (64-bit)
+  - Disable EFI
+  - 4–8 GB RAM
+  - 2 CPU cores
+  - Graphics: VMSVGA
+  - Disable 3D acceleration
+  - Storage:
+    - SATA Port 0 → `win10_raw.vmdk`
+    - SATA Port 1 → Windows ISO
+    - Host I/O Cache enabled
+
+  ## 5. Installing Windows onto the Physical Disk
+  Inside the Windows installer:
+  1. Choose the partition created earlier (`/dev/sdb3`)
+  2. Format the partition
+  3. Begin installation
+
+  **Important:**  
+  When Windows says **"Restarting…"**, SHUT DOWN the VM immediately.
+
+  ## 6. Booting Windows Natively
+  1. Reboot your Mac
+  2. Hold **ALT/Option**
+  3. Select **Windows**
+  Windows will continue the installation on real hardware.
+
+  ## 7. Setting Up Dual Boot with GRUB
+  ```bash
+  sudo mount /dev/sda1 /boot/efi
+  sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ubuntu
+  sudo update-grub
+  ```
