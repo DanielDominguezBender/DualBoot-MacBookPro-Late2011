@@ -22,24 +22,19 @@ Dual Boot: Ubuntu  ◀────▶  Windows 10
 - [Conclusión](#conclusión)
 - [English Version](#english-version)
 
+---
 
-🧭 Introducción
+## 🧭 Introducción
 
 En muchos equipos Apple antiguos (MacBook Pro 2010–2012), instalar Windows de forma nativa puede ser un verdadero desafío:
 
-El instalador USB no arranca
-
-Ventoy muestra el error “Not a Secure Boot Platform 14”
-
-La EFI del Mac no soporta el instalador de Windows
-
-El instalador se queda congelado en el logo
-
-Windows exige GPT/UEFI aunque el Mac no lo soporte
-
-GRUB no detecta Windows después de instalarlo
-
-BootCamp ya no existe o no funciona sin macOS
+- El instalador USB no arranca
+- Ventoy muestra el error “Not a Secure Boot Platform 14”
+- La EFI del Mac no soporta el instalador de Windows
+- El instalador se queda congelado en el logo
+- Windows exige GPT/UEFI aunque el Mac no lo soporte
+- GRUB no detecta Windows después de instalarlo
+- Boot Camp ya no existe o no funciona sin macOS
 
 Entonces…
 ¿Cómo instalar Windows 10 nativamente en un Mac antiguo sin BootCamp, sin EFI y sin USB?
@@ -49,15 +44,11 @@ Instalar Windows dentro de una máquina virtual, pero apuntando directamente al 
 
 Esto permite:
 
-Saltarse las limitaciones del firmware
-
-Instalar Windows directamente en un disco real
-
-Evitar todos los errores de EFI
-
-Tener dual boot Ubuntu + Windows
-
-Dar una segunda vida a hardware antiguo
+- Saltarse las limitaciones del firmware
+- Instalar Windows directamente en un disco real
+- Evitar todos los errores de EFI
+- Tener dual boot Ubuntu + Windows
+- Dar una segunda vida a hardware antiguo
 
 📌 Este procedimiento fue probado en un MacBook Pro Late 2011 (i5, 16GB RAM, doble SSD).
 
@@ -65,7 +56,7 @@ Dar una segunda vida a hardware antiguo
 ---
 
 
-🛠️ 1. Requisitos
+## 🛠️ 1. Requisitos
 
 - Ubuntu instalado en el MacBook
 - Un segundo SSD donde instalar Windows (ej: /dev/sdb)
@@ -74,10 +65,11 @@ Dar una segunda vida a hardware antiguo
 - Privilegios sudo
 - GParted instalado
 
+
 ---
 
 
-🛠️ 2. Preparar el SSD con una partición para Windows
+## 🛠️ 2. Preparar el SSD con una partición para Windows
 
 Abrir GParted:
 
@@ -85,10 +77,11 @@ Abrir GParted:
 - Crear partición NTFS de ±150GB (ejemplo)
 - Aplicar cambios → esta partición será sdb3
 
+
 ---
 
 
-🛠️ 3. Crear un Disco RAW para VirtualBox
+## 🛠️ 3. Crear un Disco RAW para VirtualBox
 
 VirtualBox puede utilizar un disco físico real mediante un archivo VMDK especial.
 
@@ -105,10 +98,11 @@ sudo chown $USER:$USER ~/win10_raw.vmdk
 sudo chmod 666 /dev/sdb
 ```
 
+
 ---
 
 
-🛠️ 4. Desactivar KVM (si no, VirtualBox no arranca)
+## 🛠️ 4. Desactivar KVM (si no, VirtualBox no arranca)
 
 ```bash
 sudo rmmod kvm_intel
@@ -124,10 +118,11 @@ sudo update-initramfs -u
 sudo reboot
 ```
 
+
 ---
 
 
-🛠️ 5. Crear y configurar la Máquina Virtual
+## 🛠️ 5. Crear y configurar la Máquina Virtual
 
 Configuración recomendada:
 
@@ -153,10 +148,11 @@ Storage
 - ISO de Windows → SATA Port 1
 - ✔️ Use Host I/O Cache
 
+
 ---
 
 
-🛠️ 6. Instalar Windows dentro de la VM (pero en disco real)
+## 🛠️ 6. Instalar Windows dentro de la VM (pero en disco real)
 
 Arranca la VM.
 
@@ -173,10 +169,11 @@ Cuando la VM diga: "Restarting…"
 APAGA LA VM inmediatamente.
 (No dejes que Windows arranque dentro de la VM o romperá la instalación, bueno, más bien la complicará)
 
+
 ---
 
 
-🛠️ 7. Arrancar Windows de forma nativa en el MacBook
+## 🛠️ 7. Arrancar Windows de forma nativa en el MacBook
 
 1) Reiniciar el Mac
 2) Mantener pulsado ALT (Option)
@@ -184,10 +181,11 @@ APAGA LA VM inmediatamente.
 4) La instalación continuará en hardware real
 5) Completar configuración (Idioma, teclado, WiFi, usuario…)
 
+
 ---
 
 
-🛠️ 8. Añadir Windows al menú GRUB (dual boot)
+## 🛠️ 8. Añadir Windows al menú GRUB (dual boot)
 
 En Ubuntu:
 
@@ -222,6 +220,9 @@ GRUB debe mostrar:
 - Ubuntu
 - Windows Boot Manager
 
+---
+
+
 ## Diagrama
 
-![Diagrama](/imgs/diagrama.png)
+![Diagrama](/imgs/diagram.png)
