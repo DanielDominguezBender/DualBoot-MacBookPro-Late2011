@@ -1,2 +1,6 @@
 # DualBoot-MacBookPro-Late2011
-Dualboot on MacBoo Pro late 2011: Windows + Ubuntu
+<br>
+![Banner](imgs/Banner.png)
+<br>
+[Spanish](https://github.com/DanielDominguezBender/DualBoot-MacBookPro-Late2011/blob/main/Spanish.md)<br>
+[English](https://github.com/DanielDominguezBender/DualBoot-MacBookPro-Late2011/blob/main/English.md)
