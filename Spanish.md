@@ -228,4 +228,4 @@ GRUB debe mostrar:
 
 ## Diagrama
 
-![Diagrama](/imgs/diagram.png)
+![Diagrama](https://github.com/DanielDominguezBender/DualBoot-MacBookPro-Late2011/edit/main/Diagrama.md)
