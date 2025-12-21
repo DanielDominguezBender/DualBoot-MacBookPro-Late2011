@@ -1,6 +1,4 @@
 
-![Banner](imgs/Banner.png)
-
 NATIVE WINDOWS INSTALLATION USING A VIRTUAL MACHINE (RAW DISK)<br>
 Dual Boot: Ubuntu  ◀────▶  Windows 10        
 
