@@ -1,7 +1,3 @@
-
-NATIVE WINDOWS INSTALLATION USING A VIRTUAL MACHINE (RAW DISK)<br>
-Dual Boot: Ubuntu  ◀────▶  Windows 10        
-
 ## Instalar Windows nativo usando una Máquina Virtual (caso real MacBook Pro 2011)
 
 
