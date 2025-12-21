@@ -1,4 +1,6 @@
-## Instalar Windows nativo usando una Máquina Virtual (caso real MacBook Pro 2011)
+## **Instalar Windows nativo usando una Máquina Virtual (caso real MacBook Pro 2011)**
+
+### **"¿Sabías que puedes instalar un sistema operativo de forma *nativa* a través de una máquina virtual?"**
 
 ```
 ╔══════════════════════════════════════════════════════════════════════╗
