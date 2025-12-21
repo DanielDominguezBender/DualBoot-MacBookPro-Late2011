@@ -29,6 +29,7 @@
 - [Dual Boot con GRUB](#-configuración-del-arranque-dual)
 - [Troubleshooting](#-troubleshooting)
 - [Conclusión](#conclusión)
+- [Diagrama](#-diagrama)
 - [English Version](#english-version)
 
 ---
@@ -238,3 +239,9 @@ GRUB debe mostrar:
 ## Diagrama
 
 ![Diagrama](https://github.com/DanielDominguezBender/DualBoot-MacBookPro-Late2011/blob/main/Diagrama.md)
+
+---
+
+## English Version
+
+![English](https://github.com/DanielDominguezBender/DualBoot-MacBookPro-Late2011/blob/main/English.md) 
