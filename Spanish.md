@@ -11,7 +11,7 @@ Dual Boot: Ubuntu  ◀────▶  Windows 10
 
 - [Introducción](#-introducción)
 - [Requisitos](#-requisitos)
-- [Preparación del SSD](#-preparación-del-ssd-para-windows)
+- [Preparar el SSD](#-preparar-el-ssd)
 - [Crear Disco RAW](#-crear-un-disco-raw-para-virtualbox)
 - [Desactivar-KVM](#-desactivar-kvm-para-usar-virtualbox)
 - [Configurar la VM](#-configurar-la-máquina-virtual)
